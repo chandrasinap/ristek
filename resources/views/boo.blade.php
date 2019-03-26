@@ -33,7 +33,7 @@
 					</div>
 					<div class="box-footer">
 						<center>
-							<button id="f_write" type="submit" class="btn btn-primary">Write</button>
+							<button id="f_write" type="submit" class="btn btn-primary">Write <i class="fa fa-arrow-circle-right"></i></button>
 						</center>
 						<div id="val_temp_flowchart"></div>
 					</div>
@@ -62,7 +62,9 @@
 		<div class="box-body">
 			<div class="row">	
 				<div class="col-lg-12">
-					<div id="diagram"></div>
+					<center>
+						<div id="diagram"></div>
+					</center>
 				</div>
 			</div>
 		</div>
