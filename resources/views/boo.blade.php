@@ -6,47 +6,64 @@
 
 @section('content')
 	<div class="box box-default">
+
         <div class="box-header with-border">
-			<h3 class="box-title">Select2</h3>
+			<h3 class="box-title">Select</h3>
 			<div class="box-tools pull-right">
 				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-				<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
 			</div>
         </div>
-			<div class="box-body">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<label>Minimal</label>
-							<select class="form-control select2" style="width: 100%;" name="val1">
-								<option selected="selected">Alabama</option>
-								<option>Alaska</option>
-								<option>California</option>
-								<option>Delaware</option>
-								<option>Tennessee</option>
-								<option>Texas</option>
-								<option>Washington</option>
-							</select>
+		
+		<div class="box-body">
+			<div class="row">
+				
+				<div class="col-lg-6">
+					<div class="form-group">
+						<div class="radio">
+							<label><input type="radio" name="main" class="choice" value="start">Start</label>
 						</div>
-						<div class="form-group">
-							<label>Minimal</label>
-							<select class="form-control select2" style="width: 100%;" name="val2">
-								<option selected="selected">Alabama</option>
-								<option>Alaska</option>
-								<option>California</option>
-								<option>Delaware</option>
-								<option>Tennessee</option>
-								<option>Texas</option>
-								<option>Washington</option>
-							</select>
+						<div class="radio">
+							<label><input type="radio" name="main" class="choice" value="process">Process</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="main" class="choice" value="end">End</label>
 						</div>
 					</div>
+					<div class="box-footer">
+						<center>
+							<button id="f_write" type="submit" class="btn btn-primary">Write</button>
+						</center>
+						<div id="val_temp_flowchart"></div>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<ul class="timeline" id="temp_flowchart"></ul>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="box-footer">
+			<center><button id="generateNow" type="submit" class="btn btn-danger">Generate Flowchart</button></center>
+		</div>
+		
+	</div>
+
+	<div class="box box-default">
+        <div class="box-header with-border">
+			<center><h3 class="box-title"><b>Flowchart</b></h3></center>
+			<div class="box-tools pull-right">
+				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			</div>
+        </div>
+		<div class="box-body">
+			<div class="row">	
+				<div class="col-lg-12">
+					
 				</div>
 			</div>
-			<div class="box-footer">
-				<center>
-					<button type="submit" class="btn btn-danger">Generate Flowchart</button>	
-				</center>
-			</div>
-      </div>
+		</div>
+	</div>
+	
 @endsection

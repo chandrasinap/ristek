@@ -12,4 +12,3 @@
 */
 
 Route::view('/', 'boo');
-Route::post('/generate', 'BooController@index');
