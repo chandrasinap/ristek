@@ -2,6 +2,8 @@
 
 @section('customJS')
 <script src="js/boo.js"></script>
+<script src="js/raphael.js"></script>
+<script src="js/flowchart.js"></script>
 @endsection
 
 @section('content')
@@ -60,7 +62,7 @@
 		<div class="box-body">
 			<div class="row">	
 				<div class="col-lg-12">
-					
+					<div id="diagram"></div>
 				</div>
 			</div>
 		</div>
