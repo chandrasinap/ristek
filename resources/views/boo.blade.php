@@ -35,7 +35,7 @@
 						<center>
 							<button id="f_write" type="submit" class="btn btn-primary">Write <i class="fa fa-arrow-circle-right"></i></button>
 						</center>
-						<div id="val_temp_flowchart"></div>
+						<div id="temporary"></div>
 					</div>
 				</div>
 
