@@ -28,6 +28,9 @@
 							<label><input type="radio" name="main" class="choice" value="process">Process</label>
 						</div>
 						<div class="radio">
+							<label><input type="radio" name="main" class="choice" value="condition">Condition</label>
+						</div>
+						<div class="radio">
 							<label><input type="radio" name="main" class="choice" value="end">End</label>
 						</div>
 					</div>
@@ -35,7 +38,6 @@
 						<center>
 							<button id="f_write" type="submit" class="btn btn-primary">Write <i class="fa fa-arrow-circle-right"></i></button>
 						</center>
-						<div id="temporary"></div>
 					</div>
 				</div>
 
