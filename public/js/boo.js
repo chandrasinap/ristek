@@ -23,7 +23,7 @@ $(' #f_write ').on('click', function() {
         if(is_condition) val = val+"_"+counter_condition;
         
         temporary_ordering.push(val);
-        
+        console.log(temporary_ordering);
     } else {
         alert('Choose one');
     }
@@ -89,34 +89,48 @@ function parsing_text () {
             desc.push(v+'=>operation'+desc_temp);
             main.push(v);
         } else if (val == 'condition') {
-
+            desc_temp = desc_condition[v] ? ': '+desc_condition[v] : '';
+            desc.push(v+'=>condition'+desc_temp);
+            main.push(v+'(yes)');
         } else if (val == 'end') {
             desc.push('e=>end');
             main.push('e');
         }
     });
     
-    return hardCode();
+    //return hardCode();
+    //console.log(desc.join("\n") + "\n\n" + main.join("->"));
     return desc.join("\n") + "\n\n" + main.join("->");
 }
 
 function addDesc (sub, name) {
     val = $("#"+name).val();
-    desc_process[name] = val;
+    if (sub == 'process') {
+        desc_process[name] = val;
+    } else if (sub == 'condition') {
+        desc_condition[name] = val;
+    }
 }
 
-function hardCode (desc, main) {
+function hardCode () {
     var desc = [];
     var main = [];
     
     desc.push('st=>start');
-    main.push('st');
-
-    desc.push('op1=>operation: anjirrrr');
-    main.push('op1');
-    
+    desc.push('op1=>operation: lala');
+    desc.push('op2=>operation: lili');
+    desc.push('op3=>operation: lolo');
+    desc.push('cn1=>condition: lulu');
     desc.push('e=>end');
-    main.push('e');
     
+    
+    main.push('st');
+    main.push('op1');
+    main.push('cn1(yes)');
+    main.push('op2');
+    main.push('op3');
+    main.push('e');
+
+    console.log(desc.join("\n") + "\n\n" + main.join("->"));
     return desc.join("\n") + "\n\n" + main.join("->");
 }
