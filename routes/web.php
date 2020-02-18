@@ -12,3 +12,7 @@
 */
 
 Route::view('/', 'boo');
+
+Route::get('well', function () {
+    return view('welcome');
+});
